@@ -34,7 +34,6 @@ class SecondActivity : AppCompatActivity() {
         if (mViewModel.customUiListLiveData.value != null){
               val  mList : ArrayList<DataList> = mViewModel.customUiListLiveData.value!!
                for (list : DataList in mList) {
-                   Log.e("loop","-->>>"+list.uiType)
                    when {
                        list.uiType.equals("label") -> {
                             addTextView(list)
